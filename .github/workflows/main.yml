@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - DEV # Change this to your respective branch
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  notify:
+     runs-on: ubuntu-latest
+     steps:
+           - name: Notify build started
+             uses: aliencube/microsoft-teams-actions@v0.8.0 # or "./" if in a local set-up if: always()
+             with:
+                webhook_uri: https://poonawallafincorp.webhook.office.com/webhookb2/efdaf8b5-8df8-4bb
+                title: Commit by ${{ github.event.commits[0].author.name}} in ${{ github.repository sections: '[{ "title": " View Workflow run: ${{ github.server_url }}/${{ github.repo summary: Commit by ${github.event.commits[0].author.name) in ${{ github.repository)
+
