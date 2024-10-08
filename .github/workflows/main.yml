@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4
         run: |
            cd /home/ubuntu
-           mkdir suraj
+           mkdir surajj
